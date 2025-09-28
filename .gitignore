@@ -1,0 +1,5 @@
+# Large source files
+map.png
+
+# macOS
+.DS_Store

@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Map Viewer</title>
+  <script src="https://unpkg.com/openseadragon@latest/build/openseadragon/openseadragon.min.js"></script>
+  <style>
+    html,body,#openseadragon { height:100%; margin:0; background-color:black; }
+
+    /* Custom flat square button styling */
+    .openseadragon-container button {
+      border-radius: 0 !important;
+      background-color: rgba(0, 0, 0, 0.7) !important;
+      border: 1px solid #666 !important;
+    }
+
+    .openseadragon-container button:hover {
+      background-color: rgba(0, 0, 0, 0.9) !important;
+      border-color: #999 !important;
+    }
+
+    /* Style the button icons */
+    .openseadragon-container .openseadragon-button {
+      background: none !important;
+    }
+
+    /* Override rounded corners on button groups */
+    .openseadragon-container .openseadragon-button-group button:first-child,
+    .openseadragon-container .openseadragon-button-group button:last-child {
+      border-radius: 0 !important;
+    }
+  </style>
+</head>
+<body>
+  <div id="openseadragon"></div>
+  <script>
+    OpenSeadragon({
+      id: "openseadragon",
+      prefixUrl: "https://unpkg.com/openseadragon@latest/build/openseadragon/images/",
+      tileSources: "map_tiles.dzi"
+    });
+  </script>
+</body>
+</html>
